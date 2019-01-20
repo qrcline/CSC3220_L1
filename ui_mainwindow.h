@@ -11,12 +11,14 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -28,9 +30,6 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QPushButton *Update_Button;
-    QLabel *label;
-    QPlainTextEdit *inputTextBox;
-    QLabel *label_2;
     QLabel *outputLabel;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
@@ -38,15 +37,20 @@ public:
     QPushButton *Position_Left_Button;
     QPushButton *Position_Center_Button;
     QPushButton *Position_End_Button;
-    QWidget *layoutWidget1;
-    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_4;
+    QWidget *widget;
+    QGridLayout *gridLayout;
+    QLabel *label;
     QPushButton *foregroundRed;
     QPushButton *foregroundBlue;
-    QWidget *layoutWidget_2;
-    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_3;
     QPushButton *backgroundRed;
     QPushButton *backgroundBlue;
-    QLabel *label_3;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_2;
+    QSpacerItem *horizontalSpacer;
+    QPlainTextEdit *inputTextBox;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -55,40 +59,26 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(649, 388);
+        MainWindow->resize(564, 353);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         Update_Button = new QPushButton(centralWidget);
         Update_Button->setObjectName(QString::fromUtf8("Update_Button"));
-        Update_Button->setGeometry(QRect(440, 30, 161, 23));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(20, 150, 109, 39));
-        QFont font;
-        font.setPointSize(10);
-        font.setBold(true);
-        font.setWeight(75);
-        label->setFont(font);
-        inputTextBox = new QPlainTextEdit(centralWidget);
-        inputTextBox->setObjectName(QString::fromUtf8("inputTextBox"));
-        inputTextBox->setGeometry(QRect(130, 20, 301, 39));
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(10, 20, 121, 39));
-        label_2->setFont(font);
+        Update_Button->setGeometry(QRect(420, 12, 130, 30));
+        Update_Button->setCursor(QCursor(Qt::PointingHandCursor));
         outputLabel = new QLabel(centralWidget);
         outputLabel->setObjectName(QString::fromUtf8("outputLabel"));
-        outputLabel->setGeometry(QRect(130, 90, 291, 41));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Calibri"));
-        font1.setPointSize(15);
-        font1.setBold(true);
-        font1.setWeight(75);
-        outputLabel->setFont(font1);
+        outputLabel->setGeometry(QRect(150, 70, 261, 41));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Calibri"));
+        font.setPointSize(17);
+        font.setBold(true);
+        font.setWeight(75);
+        outputLabel->setFont(font);
         outputLabel->setFrameShape(QFrame::Box);
         layoutWidget = new QWidget(centralWidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(40, 240, 451, 41));
+        layoutWidget->setGeometry(QRect(20, 220, 391, 41));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
@@ -96,68 +86,106 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         Position_Right_Button = new QPushButton(layoutWidget);
         Position_Right_Button->setObjectName(QString::fromUtf8("Position_Right_Button"));
+        Position_Right_Button->setCursor(QCursor(Qt::PointingHandCursor));
 
         horizontalLayout->addWidget(Position_Right_Button);
 
         Position_Left_Button = new QPushButton(layoutWidget);
         Position_Left_Button->setObjectName(QString::fromUtf8("Position_Left_Button"));
+        Position_Left_Button->setCursor(QCursor(Qt::PointingHandCursor));
 
         horizontalLayout->addWidget(Position_Left_Button);
 
         Position_Center_Button = new QPushButton(layoutWidget);
         Position_Center_Button->setObjectName(QString::fromUtf8("Position_Center_Button"));
+        Position_Center_Button->setCursor(QCursor(Qt::PointingHandCursor));
 
         horizontalLayout->addWidget(Position_Center_Button);
 
-        Position_End_Button = new QPushButton(layoutWidget);
+        Position_End_Button = new QPushButton(centralWidget);
         Position_End_Button->setObjectName(QString::fromUtf8("Position_End_Button"));
+        Position_End_Button->setGeometry(QRect(420, 270, 130, 30));
+        Position_End_Button->setCursor(QCursor(Qt::PointingHandCursor));
+        label_4 = new QLabel(centralWidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(160, 190, 126, 23));
+        QFont font1;
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label_4->setFont(font1);
+        label_4->setAlignment(Qt::AlignCenter);
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(21, 115, 391, 71));
+        gridLayout = new QGridLayout(widget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font1);
 
-        horizontalLayout->addWidget(Position_End_Button);
+        gridLayout->addWidget(label, 0, 0, 1, 1);
 
-        layoutWidget1 = new QWidget(centralWidget);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(120, 150, 341, 41));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
+        foregroundRed = new QPushButton(widget);
+        foregroundRed->setObjectName(QString::fromUtf8("foregroundRed"));
+        foregroundRed->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout->addWidget(foregroundRed, 0, 1, 1, 1);
+
+        foregroundBlue = new QPushButton(widget);
+        foregroundBlue->setObjectName(QString::fromUtf8("foregroundBlue"));
+        foregroundBlue->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout->addWidget(foregroundBlue, 0, 2, 1, 1);
+
+        label_3 = new QLabel(widget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font1);
+
+        gridLayout->addWidget(label_3, 1, 0, 1, 1);
+
+        backgroundRed = new QPushButton(widget);
+        backgroundRed->setObjectName(QString::fromUtf8("backgroundRed"));
+        backgroundRed->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout->addWidget(backgroundRed, 1, 1, 1, 1);
+
+        backgroundBlue = new QPushButton(widget);
+        backgroundBlue->setObjectName(QString::fromUtf8("backgroundBlue"));
+        backgroundBlue->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout->addWidget(backgroundBlue, 1, 2, 1, 1);
+
+        widget1 = new QWidget(centralWidget);
+        widget1->setObjectName(QString::fromUtf8("widget1"));
+        widget1->setGeometry(QRect(22, 12, 391, 31));
+        horizontalLayout_2 = new QHBoxLayout(widget1);
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        foregroundRed = new QPushButton(layoutWidget1);
-        foregroundRed->setObjectName(QString::fromUtf8("foregroundRed"));
+        label_2 = new QLabel(widget1);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font1);
 
-        horizontalLayout_2->addWidget(foregroundRed);
+        horizontalLayout_2->addWidget(label_2);
 
-        foregroundBlue = new QPushButton(layoutWidget1);
-        foregroundBlue->setObjectName(QString::fromUtf8("foregroundBlue"));
+        horizontalSpacer = new QSpacerItem(15, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addWidget(foregroundBlue);
+        horizontalLayout_2->addItem(horizontalSpacer);
 
-        layoutWidget_2 = new QWidget(centralWidget);
-        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(120, 190, 341, 41));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget_2);
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        backgroundRed = new QPushButton(layoutWidget_2);
-        backgroundRed->setObjectName(QString::fromUtf8("backgroundRed"));
+        inputTextBox = new QPlainTextEdit(widget1);
+        inputTextBox->setObjectName(QString::fromUtf8("inputTextBox"));
 
-        horizontalLayout_3->addWidget(backgroundRed);
+        horizontalLayout_2->addWidget(inputTextBox);
 
-        backgroundBlue = new QPushButton(layoutWidget_2);
-        backgroundBlue->setObjectName(QString::fromUtf8("backgroundBlue"));
-
-        horizontalLayout_3->addWidget(backgroundBlue);
-
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(20, 190, 109, 39));
-        label_3->setFont(font);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 649, 21));
+        menuBar->setGeometry(QRect(0, 0, 564, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -175,18 +203,20 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         Update_Button->setText(QApplication::translate("MainWindow", "Update", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Foreground:", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Enter Message:", nullptr));
-        outputLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        outputLabel->setText(QApplication::translate("MainWindow", "Input Message", nullptr));
         Position_Right_Button->setText(QApplication::translate("MainWindow", "Right", nullptr));
         Position_Left_Button->setText(QApplication::translate("MainWindow", "Left", nullptr));
         Position_Center_Button->setText(QApplication::translate("MainWindow", "Center", nullptr));
         Position_End_Button->setText(QApplication::translate("MainWindow", "End", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "Allignment:", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Foreground:", nullptr));
         foregroundRed->setText(QApplication::translate("MainWindow", "Red", nullptr));
         foregroundBlue->setText(QApplication::translate("MainWindow", "Blue", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "Background:", nullptr));
         backgroundRed->setText(QApplication::translate("MainWindow", "Red", nullptr));
         backgroundBlue->setText(QApplication::translate("MainWindow", "Blue", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", "Background:", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Enter Message:", nullptr));
+        inputTextBox->setPlainText(QApplication::translate("MainWindow", "Input Message", nullptr));
     } // retranslateUi
 
 };

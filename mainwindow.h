@@ -26,6 +26,14 @@ private slots:
 
     void on_backgroundBlue_clicked();
 
+    void on_Position_End_Button_clicked();
+
+    void on_Position_Right_Button_clicked();
+
+    void on_Position_Left_Button_clicked();
+
+    void on_Position_Center_Button_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
